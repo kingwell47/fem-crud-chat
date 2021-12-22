@@ -53,7 +53,15 @@ const CommentCard = () => {
         </Typography>
       </CardContent>
       <CardActions sx={{ display: "flex", justifyContent: "space-between" }}>
-        <ButtonGroup size="small" variant="contained" color="primary">
+        <ButtonGroup
+          size="small"
+          variant="contained"
+          color="primary"
+          disableElevation
+          sx={{
+            width: 100,
+          }}
+        >
           <Button>
             <AddIcon />
           </Button>
