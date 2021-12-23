@@ -4,9 +4,33 @@
   box-sizing: border-box;
 }
 
+:root {
+  --moderate-blue: hsl(238, 40%, 52%);
+  --soft-red: hsl(358, 79%, 66%);
+  --light-grayish-blue: hsl(239, 57%, 85%);
+  --pale-red: hsl(357, 100%, 86%);
+
+  --dark-blue: hsl(212, 24%, 26%);
+  --grayish-blue: hsl(211, 10%, 45%);
+  --light-gray: hsl(223, 19%, 93%);
+  --very-light-gray: hsl(228, 33%, 97%);
+  --white: hsl(0, 0%, 100%);
+
+  --color-primary-200: var(--moderate-blue);
+  --color-primary-250: var(--soft-red);
+  --color-primary-100: var(--light-grayish-blue);
+  --color-primary-150: var(--pale-red);
+
+  --color-neutral-700: var(--dark-blue);
+  --color-neutral-500: var(--grayish-blue);
+  --color-neutral-200: var(--light-gray);
+  --color-neutral-100: var(--very-light-gray);
+}
+
 body {
   margin: 0;
   font-family: "Rubik", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 1rem;
 }

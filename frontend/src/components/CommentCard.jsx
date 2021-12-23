@@ -54,25 +54,39 @@ const CommentCard = () => {
       </CardContent>
       <CardActions sx={{ display: "flex", justifyContent: "space-between" }}>
         <ButtonGroup
-          size="small"
-          variant="contained"
+          variant="text"
           color="primary"
           disableElevation
           sx={{
-            width: 100,
+            backgroundColor: "var(--color-neutral-100)",
+            borderRadius: "10px",
+            "& .MuiButtonGroup-grouped:not(:last-of-type)": {
+              borderRight: "none",
+            },
           }}
         >
           <Button>
-            <AddIcon />
+            <AddIcon sx={{ fontSize: "1rem" }} />
           </Button>
-          <Button>12</Button>
+          <Button
+            sx={{
+              fontWeight: "700",
+              fontSize: "1rem",
+              px: 0,
+              minWidth: "40px",
+            }}
+          >
+            12
+          </Button>
           <Button>
-            <RemoveIcon />
+            <RemoveIcon sx={{ fontSize: "1rem" }} />
           </Button>
         </ButtonGroup>
-        <Button>
+        <Button variant="text">
           <ReplyIcon />
-          Reply
+          <Typography sx={{ textTransform: "capitalize", fontWeight: 700 }}>
+            Reply
+          </Typography>
         </Button>
       </CardActions>
     </Card>

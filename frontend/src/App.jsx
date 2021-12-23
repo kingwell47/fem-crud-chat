@@ -10,6 +10,7 @@ function App() {
       justifyContent="center"
       flexDirection="column"
       alignItems="center"
+      sx={{ backgroundColor: "var(--color-neutral-200)" }}
     >
       <Grid container className="App" p={2} spacing={2}>
         <Grid item xs={12} p={0}>
