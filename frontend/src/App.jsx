@@ -1,9 +1,13 @@
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
-import CommentCard from "./components/CommentCard";
-import ReplyCard from "./components/ReplyCard";
+import Comment from "./components/Comment";
+import AddCommentCard from "./components/AddCommentCard";
+
+import DUMMY_DATA from "./data.json";
 
 function App() {
+  const { comments } = DUMMY_DATA;
+
   return (
     <Box
       flex
@@ -13,11 +17,13 @@ function App() {
       sx={{ backgroundColor: "var(--color-neutral-200)" }}
     >
       <Grid container className="App" p={2} spacing={2}>
-        <Grid item xs={12} p={0}>
-          <CommentCard />
-        </Grid>
+        {comments.map((comment) => (
+          <Grid item xs={12} key={comment.id}>
+            <Comment {...comment} />
+          </Grid>
+        ))}
         <Grid item xs={12}>
-          <ReplyCard />
+          <AddCommentCard />
         </Grid>
       </Grid>
     </Box>

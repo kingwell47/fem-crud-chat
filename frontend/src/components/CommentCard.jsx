@@ -17,7 +17,7 @@ import ReplyIcon from "@mui/icons-material/Reply";
 import DeleteIcon from "@mui/icons-material/Delete";
 import EditIcon from "@mui/icons-material/Edit";
 
-const CommentCard = () => {
+const CommentCard = ({ content, createdAt, score, user, replies }) => {
   const headerTitle = (
     <Box
       sx={{
@@ -26,31 +26,27 @@ const CommentCard = () => {
       }}
     >
       <Typography color="text.primary" sx={{ fontWeight: "bold", mr: 2 }}>
-        amyrobson
+        {user.username}
       </Typography>
-      <Typography color="text.secondary">1 month ago</Typography>
+      <Typography color="text.secondary">{createdAt}</Typography>
     </Box>
   );
 
   return (
-    <Card sx={{ width: "100%" }}>
+    <Card sx={{ width: "100%", boxShadow: "none" }}>
       <CardContent>
         <CardHeader
           avatar={
             <Avatar
-              alt="amyrobson"
-              src="../images/avatars/image-amyrobson.png"
+              alt={user.username}
+              src={user.image.png}
               sx={{ width: "2rem", height: "auto" }}
             />
           }
           title={headerTitle}
           sx={{ p: 0, mb: 2 }}
         />
-        <Typography variant="body1">
-          Impressive! Though it seems the drag feature could be improved. But
-          overall it looks incredible. You've nailed the design and the
-          responsiveness at various breakpoints works really well.
-        </Typography>
+        <Typography variant="body1">{content}</Typography>
       </CardContent>
       <CardActions sx={{ display: "flex", justifyContent: "space-between" }}>
         <ButtonGroup
@@ -76,7 +72,7 @@ const CommentCard = () => {
               minWidth: "40px",
             }}
           >
-            12
+            {score}
           </Button>
           <Button>
             <RemoveIcon sx={{ fontSize: "1rem" }} />

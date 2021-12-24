@@ -6,7 +6,7 @@ import Avatar from "@mui/material/Avatar";
 import CardActions from "@mui/material/CardActions";
 import Button from "@mui/material/Button";
 
-const ReplyCard = () => {
+const AddCommentCard = () => {
   return (
     <Card>
       <CardContent>
@@ -28,4 +28,4 @@ const ReplyCard = () => {
   );
 };
 
-export default ReplyCard;
+export default AddCommentCard;
