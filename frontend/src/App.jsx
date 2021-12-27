@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import Comment from "./components/Comment";
@@ -6,6 +7,7 @@ import AddCommentCard from "./components/AddCommentCard";
 import DUMMY_DATA from "./data.json";
 
 function App() {
+  const [currentUser, setCurrentUser] = useState();
   const { comments } = DUMMY_DATA;
 
   return (
